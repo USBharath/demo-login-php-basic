@@ -112,3 +112,17 @@ button.btn.btn-submit {
     background: #b19191;
     border: 1px solid #b19191;
 }
+
+h4 {
+    position: absolute;
+    right: 100px;
+    top: 16px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: inherit;
+}
+
+p {
+    text-align: center;
+    margin-top: 100px;
+}

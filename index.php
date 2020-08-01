@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,21 +9,18 @@
 </head>
 <body class="home index">
 	<div class="wrap">
-		<nav class="nav nav-custom">
-			<h1><a href="index.php" class="logo">LOGIN</a></h1>
-			<form action="" method="POST" class="form-signin">
-				<input type="text" name="user_uid" placeholder="Username or Email" autocomplete="none">
-				<input type="password" name="user_pwd" placeholder="Password" autocomplete="none">
-				<button type="submit">Login</button>
-			</form>
-			<a href="signup.php" class="btn btn-red signup">Register</a>
-		</nav>
+		<?php
+			include_once 'includes/navbar.php';
+		?>
 		<section>
 			<h3>Home</h3>
+			<?php
+				if (isset($_SESSION["u_id"])) {
+					echo "<p>You are logged !</p>";
+				}
+			?>
 		</section>
-		<footer>
-			<p>Design by <a href="https://www.facebook.com/PhiHoangOfficial" class="author" target="_blank">Phi Hoang</a> 2020 - 2021</p>
-		</footer>
+		<?php include_once 'includes/footer.php'; ?>
 	</div>
 </body>
 </html>
