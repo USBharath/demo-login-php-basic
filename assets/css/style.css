@@ -1,40 +1,151 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: Arial;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav {
+    height: 45px;
+    background: #fff;
+    position: relative;
+    top: 0;
 }
 
-.nav{
-	height: 45px;
-	background: #fff;
-	position: relative;
-	top: 0;
+.index {
+    background: #ebebeb;
 }
 
-.index{
-	background: #ebebeb;
+.form-signin {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    line-height: 45px;
 }
 
-.form-signin{
-	position: absolute;
-	right: 100px;
-	top: 0;
-	line-height: 45px;
+.signup {
+    position:  absolute;
+    right:  30px;
+    top: 11px;
+    background: #ff6472;
+    padding: 6px 10px;
+    color: #fff;
+    border-radius: 2px;
+    text-decoration:  none;
+    font-size: 10px;
+    font-family:  Arial;
 }
 
-.signup{
-	position: absolute;
-	padding: 6px 10px;
-	right: 30px;
-	top: 11px;
-	background: #b19191;
-	color: #fff;
-	border-radius: 2px;
-	text-decoration: none;
-	font-family: Arial;
-	font-size: 12px;
+h1 {
+    font-family: Arial;
+    font-size: 18px;
+    line-height:  45px;
+    margin: 0 0 0 30px;
+    color: lightblue;
 }
+
+
+.content {
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px;
+}
+
+.content form input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.content form {
+    text-align: center;
+}
+
+.content form button {
+    background: #ff6472;
+    color: #fff;
+}
+
+.wrap-img {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-user {
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #c5c5c5;
+    float: left;
+}
+
+.name-user {
+    display: block;
+    font-family: Arial;
+    float: left;
+    padding-left: 10px;
+}
+
+.email-user {
+    position: absolute;
+    bottom: 25px;
+    left: 70px;
+    font-family: Arial;
+    font-size: 12px;
+    color: #999;
+}
+
+.content-allimg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.content-selfimg {
+    padding: 10px;
+    text-align: center;
+}
+
+.wrap-selfimg {
+    position: relative;
+    background: #fff;
+    margin-top: -10px!important;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+.selfuser {
+    float: none;
+    width: 100px;
+}
+
+.form-upload-profile {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn-upload {
+    background: lightcoral;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-upload-profile input[type="file"] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
 
 a.logo{
 	font-family: Arial;
@@ -85,12 +196,6 @@ h3 {
     color: #999;
 }
 
-a.author {
-	text-decoration: none;
-	font-weight: bold;
-	color: #fff;
-}
-
 
 .content {
     width: 300px;
@@ -122,7 +227,7 @@ h4 {
     font-weight: inherit;
 }
 
-p {
-    text-align: center;
-    margin-top: 100px;
+a.author {
+    color: #fff;
+    text-decoration: none;
 }
