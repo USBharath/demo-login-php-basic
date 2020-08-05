@@ -45,6 +45,19 @@
 							// bind parameters to the placehoder
 							mysqli_stmt_bind_param($stmt, "sssss", $uid, $email, $first, $last, $hashedPwd);
 							mysqli_stmt_execute($stmt);
+
+							$sql_1 = "SELECT * FROM tb_users WHERE user_uid = '$uid' AND user_first = '$first'";
+							$result = mysqli_query($conn, $sql_1);
+							if (mysqli_num_rows($result) > 0) {
+								while ($rows = mysqli_fetch_assoc($result)) {
+								    $userid = $rows['user_id'];
+								    $sql = "INSERT INTO tb_profiles_img (user_id, status) VALUES ('$userid', 1)";
+								    mysqli_query($conn, $sql);
+								}
+							}else {
+								echo 'You have an error !';
+							}
+
 							header("Location: ../signup.php?signup=success");
 							exit();
 						}
