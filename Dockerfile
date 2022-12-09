@@ -1,13 +1,19 @@
-FROM node:16
+FROM composer:1.9.3 as vendor
 
-WORKDIR /usr/src/app
-COPY package*.json ./
+WORKDIR /tmp/
 
-RUN npm install
+COPY composer.json composer.json
+COPY composer.lock composer.lock
+
+RUN composer install \
+    --ignore-platform-reqs \
+    --no-interaction \
+    --no-plugins \
+    --no-scripts \
+    --prefer-dist
 
 
-COPY . .
+FROM php:7.2-apache-stretch
 
-EXPOSE 3000
-ENTRYPOINT [ "npm", "start" ]
-CMD [ "php", "-s", "0.0.0.0:3000" ]
+COPY . /var/www/html
+COPY --from=vendor /tmp/vendor/ /var/www/html/vendor/
